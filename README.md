@@ -1,9 +1,9 @@
-NETWORK MONITORING AND ANALYSIS TOOL
-	(only for ubuntu)
-Steps to install:
-1. Install LAMP on your system using following commands
-	apache: sudo apt-get install apache2
-	MySQL : sudo apt-get install mysql-server php5-mysql
+<h1>NETWORK MONITORING AND ANALYSIS TOOL</h1>
+	
+Steps to install (only for ubuntu):
+1. Install LAMP on your system using following commands<br>
+	apache: sudo apt-get install apache2<br>
+	MySQL : sudo apt-get install mysql-server php5-mysql<br>
 	PHP   : sudo apt-get install php5 libapache2-mod-php5 php5-mycrypt
 
 2. Copy the test folder to /var/www/html
@@ -17,6 +17,6 @@ Steps to install:
 	ipv4  : chmod 755 shellipv4.sh
 	ipv6  : chmod 755 shellipv6.sh
 
-5.Open web browser and type localhost/test/login.php in the address bar.
+5. Open web browser and type localhost/test/login.php in the address bar.
 
 (You're good to go) 
