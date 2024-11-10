@@ -1,12 +1,14 @@
 cd /var/www/html/test
+### grab 20 packets (-c 20)
 tcpdump -i eth0 -ne -c 20 > tcpdump1
 
+### remove IPv6 all packets
 sed "/IPv6/d" tcpdump1 > tcpdump
 grep "IPv4" tcpdump > IPv4
 grep "ARP" tcpdump > ARP
 grep "UDP" tcpdump > UDP
 
-cut -d" " -f1 IPv4 > timestamp
+# cut -d" " -f1 IPv4 > timestamp
 cut -d"." -f1 IPv4 > timestamp
 cut -d" " -f2 IPv4 > sourcemacipv4
 cut -d" " -f4 IPv4 > destinationmacipv4
@@ -21,7 +23,7 @@ cut -d"." -f1,2,3,4 destip > destipadd
 cut -d"." -f5 destip > destportno
 cut -d":" -f1 destportno > destportleng
 
-cut -d" " -f1 ARP > timestamparp
+# cut -d" " -f1 ARP > timestamparp
 cut -d"." -f1 ARP > timestamparp
 cut -d" " -f2 ARP > sourcemacarp
 cut -d" " -f4 ARP > destinationmacarp
